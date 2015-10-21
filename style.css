@@ -1,2 +1,65 @@
 body {
   background-color: gray; }
+
+ul {
+  display: block;
+  text-decoration: none; }
+
+li {
+  display: inline-block;
+  text-decoration: none; }
+
+section ul {
+  padding: 0; }
+  section ul li {
+    display: inline-block;
+    vertical-align: top; }
+
+#left-C {
+  width: 23%;
+  margin-left: 8%;
+  margin-right: 2%; }
+
+#pic {
+  width: 100%; }
+  #pic img {
+    width: 14em;
+    border-radius: 1em; }
+
+#names {
+  width: 100%; }
+  #names li {
+    display: block; }
+
+#details2 {
+  margin-left: 5%; }
+
+#details2 li {
+  margin: 0 13%; }
+
+#details2Titles li {
+  margin: 0 3%; }
+
+#org li {
+  display: block; }
+
+#right-C {
+  width: 54%;
+  margin-left: 0;
+  margin-top: 0; }
+
+.tabs li a {
+  text-decoration: none;
+  border-style: outset;
+  border-color: black;
+  border-width: thin;
+  color: black; }
+
+#repo li {
+  display: block; }
+
+#cont {
+  display: none; }
+
+#pa {
+  display: none; }
