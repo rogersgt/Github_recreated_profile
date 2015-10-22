@@ -1,3 +1,9 @@
+$gray: #B2B2B2;
+$lightgray: #D8D8D8;
+$blue: #296ACC;
+$green: #29AB29;
+$offwhite: #CFCFCF;
+
 ////////////////////////// General Body /////////////////////////
 body{
   margin: 0;
@@ -29,6 +35,9 @@ a{
 div{
   length: 40%;
 }
+hr{
+  color: $lightgray;
+}
 ////// icon default size ////
 .size{
   font-size: 1em;
@@ -40,19 +49,36 @@ nav{
   a{
     color: black;
   }
-  background-color: #D1D1D1;
+  background-color: #E6E6E6;
   border-bottom: solid thin #666666;
   margin-top: 0;
-  padding-top: 2%;
+  padding-top: 1%;
   ul{
     margin-top: 0;
+    li{
+      vertical-align: middle;
+    }
   }
 }
 #head-left{
-  margin-right: 30%;
+  font-size: .9em;
+  margin-right: 25%;
   margin-left: 4%;
+  width: 50%;
   input{
     width: 22em;
+    padding: 2% 0;
+    border-radius: .3em;
+  }
+  li{
+    margin-right: 1%;
+    &:nth-child(1){
+      font-size: 1.7em;
+    }
+    &:nth-child(3), &:nth-child(4), &:nth-child(5){
+      font-size: .8em;
+      font-weight: bold;
+    }
   }
 }
 #head-right{
@@ -98,6 +124,23 @@ nav{
 width: 100%;
  li{
   display: block;
+  &:nth-child(1){
+    font-weight: bold;
+    font-size: 1.8em;
+  }
+  &:nth-child(2){
+    font-size: 1em;
+    color: #B2B2B2;
+    font-weight: lighter;
+  }
+  }
+}
+#details1{
+  li{
+    font-size: .8em;
+    &:nth-child(1){
+      color: $blue;
+    }
   }
 }
 #details2{
@@ -105,15 +148,24 @@ width: 100%;
 }
 #details2 li{
   margin: 0 13%;
+  font-size: 1.5em;
+  color: $blue;
+  font-weight: bold;
 }
 #details2Titles{
   li{
-    margin: 0 3%;
+    margin: 0 9.5%;
+    font-size: .6em;
   }
 }
 #org{
   li{
     display: block;
+    a{
+      img{
+        width: 15%;
+      }
+    }
   }
 }
 
@@ -127,27 +179,42 @@ width: 100%;
 }
 .tabs{
     li{
-      width: 16.9%;
+      width: 19%;
       margin: 0;
       &:nth-child(3){
-        margin-right: 27%;
+        margin-right: 20%;
       }
       &:nth-child(4){
         width: 20%;
+        padding-bottom: 1%;
       }
      a{
      text-decoration: none;
-     color: black;
+     color: $gray;
      margin: 2% 0;
      padding: 2%;
-   }
-   button{
-
+     width: 100%;
+     span{
+       margin: 0 3%;
+     font-weight: lighter;
+     font-size: .8em;
+    }
    }
  }
 }
 #repo li{
   display: block;
+  padding: 5% 0;
+  border-bottom: .1em solid $lightgray;
+  a{
+    color: $blue;
+    font-weight: bold;
+    font-size: 1.2em;
+    width: 50%;
+  }
+  div{
+    width: 40%;
+  }
 }
 #cont{
   display: none;
@@ -173,12 +240,37 @@ width: 100%;
   border: .1em solid #B2B2B2;
   border-radius: .2em;
   border-bottom: none;
-  padding-bottom: .3em;
+  padding-bottom: .7em;
   background-color: white;
+  color: black;
 }
 #pa-tab, #cont-tab{
   background-color: white;
   border-radius: .2em;
+}
+#search-rep{
+  display: inline-block;
+  border-bottom: .1em solid $lightgray;
+  padding-bottom: 1em;
+  width: 100%;
+  font-size: .8em;
+  li{
+    margin: 0 .3%;
+    &:nth-child(8){
+      width: 10%;
+    }
+    &:nth-child(1){
+      width: 40%;
+      margin-right: 2%;
+    }
+    a{
+      color: $blue;
+    }
+    input{
+      padding: 3%;
+      width: 65%;
+    }
+  }
 }
 /// hr tag below buttons ///
 .up{
@@ -189,11 +281,36 @@ width: 100%;
 ////////////////////////////// Footer ///////////////////////////////////
 #foot{
   font-size: .7em;
-  li{
-    margin: 0 auto;
-    padding: 0;
-    &:nth-child(2){
-      margin-left: 2%;
-    }
+}
+.footer{
+    width: 30%;
+  &:nth-child(1){
+    margin-left: 15%;
   }
+  ul{
+    width: 100%;
+  }
+}
+/// icon color ///
+.icon-gray{
+  color: $gray;
+  // font-size: .9em;
+}
+//////////////////////////////////////////////////////////////////////////////
+
+///////////////////////////// Buttons ///////////////////////////////////
+.gray{
+  border-radius: .2em;
+  box-shadow: none;
+  border: .1em solid $offwhite;
+  background-color: white;
+  padding: 3%;
+}
+.green{
+  width: 100%;
+  border-radius: .2em;
+  background-color: $green;
+  color: white;
+  border: .1em solid #196719;
+  padding: 10% 5%;
 }

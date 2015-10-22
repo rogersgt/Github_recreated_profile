@@ -27,9 +27,10 @@ var date = moment(user.created_at).format('LL');
 
 $('#details1').html(
   "<li>" +
+  "<span class='size mega-octicon octicon-mail'></span> " +
   user.email +
   "</li>" +
-  "<li>Joined on " +
+  "<li><span class='size mega-octicon octicon-clock'></span> Joined on " +
    date +
   "</li>"
 );
@@ -78,9 +79,11 @@ $('#rep-tab').click(function(event){
   $('#cont').css('display', 'none');
   $('#pa').css('display', 'none');
 ///// switch border and padding to break underline /////
-  $('#rep-tab').css('padding-bottom', '0.3em').css('border', '.1em solid #B2B2B2').css('border-bottom', 'none');
-  $('#pa-tab').css('padding-bottom', '.1em').css('border', 'none');
-  $('#cont-tab').css('padding-bottom', '.1em').css('border', 'none');
+  $('#rep-tab').css('padding-bottom', '0.7em').css('border', '.1em solid #B2B2B2').css('border-bottom', 'none').css('color', 'black');
+  $('#pa-tab').css('padding-bottom', '.1em').css('border', 'none').css('color', 'gray');
+  $('#cont-tab').css('padding-bottom', '.1em').css('border', 'none').css('color', 'gray');
+  //////// search bar visibility ///////
+  $('#search-rep').css('display', 'inline-block');
 });
 
 $('#pa-tab').click(function(event){
@@ -89,9 +92,11 @@ $('#pa-tab').click(function(event){
   $('#cont').css('display', 'none');
   $('#repo').css('display', 'none');
 
-  $('#pa-tab').css('padding-bottom', '0.3em').css('border', '.1em solid #B2B2B2').css('border-bottom', 'none');
-  $('#rep-tab').css('padding-bottom', '.1em').css('border', 'none');
-  $('#cont-tab').css('padding-bottom', '.1em').css('border', 'none');
+  $('#pa-tab').css('padding-bottom', '0.7em').css('border', '.1em solid #B2B2B2').css('border-bottom', 'none').css('color', 'black');
+  $('#rep-tab').css('padding-bottom', '.1em').css('border', 'none').css('color', 'gray');
+  $('#cont-tab').css('padding-bottom', '.1em').css('border', 'none').css('color', 'gray');
+
+  $('#search-rep').css('display', 'none');
 });
 
 $('#cont-tab').click(function(event){
@@ -100,9 +105,12 @@ $('#cont-tab').click(function(event){
   $('#repo').css('display', 'none');
   $('#pa').css('display', 'none');
 
-  $('#cont-tab').css('padding-bottom', '0.3em').css('border', '.1em solid #B2B2B2').css('border-bottom', 'none');
-  $('#rep-tab').css('padding-bottom', '.1em').css('border', 'none');
-  $('#pa-tab').css('padding-bottom', '.1em').css('border', 'none');
+  $('#cont-tab').css('padding-bottom', '0.7em').css('border', '.1em solid #B2B2B2').css('border-bottom', 'none').css('color', 'black');
+  $('#pa-tab').css('padding-bottom', '.1em').css('border', 'none').css('color', 'gray');
+  $('#rep-tab').css('padding-bottom', '.1em').css('border', 'none').css('color', 'gray');
+
+  $('#search-rep').css('display', 'none');
+
 });
 
 //////// Contributions Tab /////////
@@ -128,7 +136,7 @@ for(var i = 0; i < repositories.length; i++){
                  "<span class='size mega-octicon octicon-star'></span>" +
                  "0" +
                  "<span class='size mega-octicon octicon-git-branch'></span>" +
-                 "</div></li><hr>"];
+                 "</div></li>"];
 }
 
 $('#repo').html(repoArray);
