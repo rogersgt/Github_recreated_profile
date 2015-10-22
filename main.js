@@ -1,6 +1,13 @@
-/////////////////////////////// Left Column ////////////////////////////////////////
+/////////////////////////////// Header /////////////////////////////////////////////
 var pic = user.avatar_url;
 
+$('#sm-pic').html(
+    "<img src='" +
+    pic +
+    "'/>"
+);
+
+/////////////////////////////// Left Column ////////////////////////////////////////
 $('#pic').html(
   "<img src='" +
   pic +
@@ -62,11 +69,18 @@ $('#org').html(
 /////////////////////////////////////////////////////////////////////////
 
 ////////////////////////////// Right Column /////////////////////////////
-$('#repo-tab').click(function(event){
+
+///// Button Stuff ////
+$('#rep-tab').click(function(event){
   event.preventDefault();
+  //// switch material displayed ////
   $('#repo').css('display', 'block');
   $('#cont').css('display', 'none');
   $('#pa').css('display', 'none');
+///// switch border and padding to break underline /////
+  $('#rep-tab').css('padding-bottom', '0.3em').css('border', '.1em solid #B2B2B2').css('border-bottom', 'none');
+  $('#pa-tab').css('padding-bottom', '.1em').css('border', 'none');
+  $('#cont-tab').css('padding-bottom', '.1em').css('border', 'none');
 });
 
 $('#pa-tab').click(function(event){
@@ -74,6 +88,10 @@ $('#pa-tab').click(function(event){
   $('#pa').css('display', 'block');
   $('#cont').css('display', 'none');
   $('#repo').css('display', 'none');
+
+  $('#pa-tab').css('padding-bottom', '0.3em').css('border', '.1em solid #B2B2B2').css('border-bottom', 'none');
+  $('#rep-tab').css('padding-bottom', '.1em').css('border', 'none');
+  $('#cont-tab').css('padding-bottom', '.1em').css('border', 'none');
 });
 
 $('#cont-tab').click(function(event){
@@ -81,6 +99,10 @@ $('#cont-tab').click(function(event){
   $('#cont').css('display', 'block');
   $('#repo').css('display', 'none');
   $('#pa').css('display', 'none');
+
+  $('#cont-tab').css('padding-bottom', '0.3em').css('border', '.1em solid #B2B2B2').css('border-bottom', 'none');
+  $('#rep-tab').css('padding-bottom', '.1em').css('border', 'none');
+  $('#pa-tab').css('padding-bottom', '.1em').css('border', 'none');
 });
 
 //////// Contributions Tab /////////
@@ -96,9 +118,17 @@ var repoLink = repos.map(function(el){
 var repoArray = [];
 
 for(var i = 0; i < repositories.length; i++){
-  repoArray += ["<li><a href=repoLink[i]>" +
+  repoArray += ["<li><a href=" +
+                repoLink[i] +
+                ">" +
                 repositories[i] +
-                "</a><div> type and stuff </div></li><hr>"];
+                "</a><div>" +
+                 "type " +
+                 "0" +
+                 "<span class='size mega-octicon octicon-star'></span>" +
+                 "0" +
+                 "<span class='size mega-octicon octicon-git-branch'></span>" +
+                 "</div></li><hr>"];
 }
 
 $('#repo').html(repoArray);

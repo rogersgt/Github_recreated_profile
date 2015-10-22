@@ -15,7 +15,7 @@ section ul {
   padding: 0; }
   section ul li {
     display: inline-block;
-    vertical-align: top; }
+    vertical-align: middle; }
 
 input {
   border-radius: .3em;
@@ -27,11 +27,16 @@ a {
 div {
   length: 40%; }
 
+.size {
+  font-size: 1em; }
+
 nav {
   background-color: #D1D1D1;
   border-bottom: solid thin #666666;
   margin-top: 0;
   padding-top: 2%; }
+  nav a {
+    color: black; }
   nav ul {
     margin-top: 0; }
 
@@ -41,13 +46,33 @@ nav {
   #head-left input {
     width: 22em; }
 
+#head-right {
+  width: 10%; }
+  #head-right ul {
+    width: 100%;
+    padding: 0; }
+    #head-right ul li a, #head-right ul li span {
+      margin: 0 2%; }
+    #head-right ul li {
+      width: 25%; }
+
+#sm-pic img {
+  width: 1em;
+  vertical-align: bottom;
+  border-radius: .2em; }
+
+.underline {
+  margin-top: 0; }
+
 #left-C {
   width: 23%;
   margin-left: 8%;
-  margin-right: 2%; }
+  margin-right: 2%;
+  vertical-align: top; }
 
 #pic {
-  width: 100%; }
+  width: 100%;
+  vertical-align: top; }
   #pic img {
     width: 14em;
     border-radius: 1em; }
@@ -74,13 +99,18 @@ nav {
   margin-left: 0;
   margin-top: 0; }
 
-.tabs li a {
-  text-decoration: none;
-  border-style: outset;
-  border-color: black;
-  border-width: thin;
-  color: black;
-  margin: 2% 0; }
+.tabs li {
+  width: 16.9%;
+  margin: 0; }
+  .tabs li:nth-child(3) {
+    margin-right: 27%; }
+  .tabs li:nth-child(4) {
+    width: 20%; }
+  .tabs li a {
+    text-decoration: none;
+    color: black;
+    margin: 2% 0;
+    padding: 2%; }
 
 #repo li {
   display: block; }
@@ -88,11 +118,34 @@ nav {
 #cont {
   display: none; }
 
+#repo a {
+  width: 20%;
+  display: inline-block; }
+
+#repo div {
+  display: inline-block;
+  width: 79%;
+  text-align: right; }
+
 #pa {
   display: none; }
 
 .repoSpacer {
   margin-right: 5%; }
+
+#rep-tab {
+  border: .1em solid #B2B2B2;
+  border-radius: .2em;
+  border-bottom: none;
+  padding-bottom: .3em;
+  background-color: white; }
+
+#pa-tab, #cont-tab {
+  background-color: white;
+  border-radius: .2em; }
+
+.up {
+  color: #B2B2B2; }
 
 #foot {
   font-size: .7em; }
