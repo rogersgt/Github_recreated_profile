@@ -1,20 +1,3 @@
-///////////////////////////////// Repository List //////////////////////////////
-var repositories = repos.map(function(el){
-  return el.name;
-});
-var repoLink = repos.map(function(el){
-  return el.html_url;
-});
-
-var repoArray = [];
-
-for(var i = 0; i < repositories.length; i++){
-  repoArray += ["<li><a href=repoLink[i]>" + repositories[i] + "</a></li>"];
-}
-
-$('#repo').html(repoArray);
-
-
 /////////////////////////////// Left Column ////////////////////////////////////////
 var pic = user.avatar_url;
 
@@ -33,12 +16,14 @@ $('#names').html(
   "</li>"
 );
 
+var date = moment(user.created_at).format('LL');
+
 $('#details1').html(
   "<li>" +
   user.email +
   "</li>" +
   "<li>Joined on " +
-   user.created_at +
+   date +
   "</li>"
 );
 
@@ -74,6 +59,7 @@ $('#org').html(
   "'><img src='https://avatars1.githubusercontent.com/u/14251473?v=3&s=84' /></a></li>"
 
 );
+/////////////////////////////////////////////////////////////////////////
 
 ////////////////////////////// Right Column /////////////////////////////
 $('#repo-tab').click(function(event){
@@ -96,3 +82,25 @@ $('#cont-tab').click(function(event){
   $('#repo').css('display', 'none');
   $('#pa').css('display', 'none');
 });
+
+//////// Contributions Tab /////////
+
+//////// Repository Tab ////////////
+var repositories = repos.map(function(el){
+  return el.name;
+});
+var repoLink = repos.map(function(el){
+  return el.html_url;
+});
+
+var repoArray = [];
+
+for(var i = 0; i < repositories.length; i++){
+  repoArray += ["<li><a href=repoLink[i]>" +
+                repositories[i] +
+                "</a><div> type and stuff </div></li><hr>"];
+}
+
+$('#repo').html(repoArray);
+
+//////// Public Activity Tab /////
